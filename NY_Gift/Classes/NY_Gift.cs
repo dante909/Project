@@ -8,5 +8,6 @@ namespace NY_Gift.Classes
 {
     public class NY_Gift
     {
+
     }
 }

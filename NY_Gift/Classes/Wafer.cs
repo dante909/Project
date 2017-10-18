@@ -8,5 +8,11 @@ namespace NY_Gift.Classes
 {
     public class Wafer : Sweet
     {
+        public Wafer(double weight, string name, double sugar)
+           : base(weight, name, sugar)
+        { }
+
+        public Wafer()
+        { }
     }
 }

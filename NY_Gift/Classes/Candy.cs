@@ -8,5 +8,13 @@ namespace NY_Gift.Classes
 {
     public class Candy : Sweet
     {
+        public Candy()
+        {
+        }
+
+        public Candy(double weight, string name, double sugar)
+            : base(weight, name, sugar)
+        { }
+
     }
 }

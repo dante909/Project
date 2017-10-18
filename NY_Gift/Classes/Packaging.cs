@@ -8,5 +8,12 @@ namespace NY_Gift.Classes
 {
     public class Packaging : Weighted_Element
     {
+        public Packaging()
+        {
+        }
+
+        public Packaging(double weight, string name)
+            : base(weight, name)
+        { }
     }
 }
