@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NY_Gift.Classes
 {
-    class Sweet
+    public class Sweet : Weighted_Element
     {
     }
 }

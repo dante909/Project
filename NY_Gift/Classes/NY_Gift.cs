@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NY_Gift.Classes
 {
-    class NY_Gift
+    public class NY_Gift
     {
     }
 }

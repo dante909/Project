@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NY_Gift.Classes
 {
-    class Element
+    abstract public class Element
     {
+
     }
 }

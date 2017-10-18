@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NY_Gift.Classes
 {
-    class Discount
+    public class Discount : Element
     {
     }
 }

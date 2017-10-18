@@ -10,6 +10,7 @@ namespace NY_Gift
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
