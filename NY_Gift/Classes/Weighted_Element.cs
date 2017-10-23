@@ -10,6 +10,13 @@ namespace NY_Gift.Classes
     {
 
         private double _weight;
+        private double _price;
+
+        public double Price
+        {
+            get { return _price; }
+            set { _price = value; }
+        }
 
         public double Weight
         {
@@ -17,10 +24,11 @@ namespace NY_Gift.Classes
             set { _weight = value; }
         }
 
-        public Weighted_Element(double weight, string name)
+        public Weighted_Element(double weight, double price, string name)
             : base(name)
         {
             Weight = weight;
+            Price = price;
         }
 
         public Weighted_Element()

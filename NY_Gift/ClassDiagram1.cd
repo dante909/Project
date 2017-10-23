@@ -10,7 +10,7 @@
   <Class Name="NY_Gift.Classes.Discount" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Discount.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,9 +24,10 @@
   <Class Name="NY_Gift.Classes.NY_Gift" Collapsed="true">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAASAABAAAAAABAAAAAAAAAAAgAAAAQAAAAgAAAAAAA=</HashCode>
       <FileName>Classes\NY_Gift.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="NY_Gift.Classes.Packaging" Collapsed="true">
     <Position X="2.75" Y="3.25" Width="1.5" />
@@ -52,7 +53,7 @@
   <Class Name="NY_Gift.Classes.Weighted_Element" Collapsed="true">
     <Position X="5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgABAAAAAQAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Weighted_Element.cs</FileName>
     </TypeIdentifier>
   </Class>

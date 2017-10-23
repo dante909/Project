@@ -8,10 +8,9 @@ namespace NY_Gift.Classes
 {
     public class Discount : Element
     {
-        private double _discount;
+        private double _bonus;
 
-        public Discount(string name, double bonus)
-            : base(name)
+        public Discount(double bonus)
         {
             Bonis = bonus;
         }
@@ -21,13 +20,13 @@ namespace NY_Gift.Classes
 
         public double Bonis
         {
-            get { return _discount; }
+            get { return _bonus; }
             set
             {
                 if (value < 0 || value > 100)
                     Console.WriteLine("Error");
                 else
-                    _discount = value;
+                    _bonus = value;
             }
         }
 

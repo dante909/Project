@@ -12,8 +12,8 @@ namespace NY_Gift.Classes
         {
         }
 
-        public Packaging(double weight, string name)
-            : base(weight, name)
+        public Packaging(double weight, double price, string name)
+            : base(weight, price, name)
         { }
     }
 }
