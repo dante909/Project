@@ -19,7 +19,13 @@ namespace NY_Gift.Classes
         public string Name
         {
             get { return _name; }
-            set { _name = value; }
+            set
+            {
+                if (value.Length > 15)
+                    Console.WriteLine("Error!");
+                else
+                    _name = value;
+            }
         }
     }
 }
