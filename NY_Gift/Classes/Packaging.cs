@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NY_Gift.Interfaces;
+
 
 namespace NY_Gift.Classes
 {
@@ -38,7 +38,10 @@ namespace NY_Gift.Classes
 
         public Packaging(double weight, double price, string name)
             :base(weight, price, name)
-        { }
+        {
+            Weight = weight;
+            Price = price;
+        }
 
     }
 }

@@ -10,7 +10,6 @@ namespace NY_Gift.Classes
     {
         static void Main(string[] args)
         {
-
         }
     }
 }
