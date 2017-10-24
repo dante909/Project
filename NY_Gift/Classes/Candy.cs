@@ -12,8 +12,8 @@ namespace NY_Gift.Classes
         {
         }
 
-        public Candy(double weight, double price, string name, double sugar)
-            : base(weight, price, name, sugar)
+        public Candy(double weight, double price, double sugar, string name)
+            :base(weight, price, sugar, name)
         { }
 
     }

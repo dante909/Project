@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NY_Gift.Interfaces;
 
 namespace NY_Gift.Classes
 {
@@ -22,14 +23,43 @@ namespace NY_Gift.Classes
             }
         }
 
-        public Sweet()
+        public override double Price
         {
+            get { return _price; }
+            set
+            {
+                if (value < 0 || value > 100)
+                    Console.WriteLine("Error!");
+                else
+                    _price = value;
+            }
         }
 
-        public Sweet(double weight, double price, string name, double sugar)
-            : base(weight, price, name)
+        public override double Weight
         {
+            get { return _weight; }
+            set
+            {
+                if (value < 0 || value > 100)
+                    Console.WriteLine("Error!");
+                else
+                    _weight = value;
+            }
+        }
+        
+        public Sweet() { }
+
+        public Sweet(double weight, double price, double sugar, string name)
+            :base(weight, price, name)
+        {
+            Weight = weight;
+            Price = price;
             Sugar = sugar;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Weight {0}, Price {1}, Sugar {2}, Name {3}", Weight, Price, Sugar, Name);
         }
     }
 }

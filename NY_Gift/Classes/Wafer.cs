@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace NY_Gift.Classes
 {
     public class Wafer : Sweet
-    {
-        public Wafer(double weight, double price, string name, double sugar)
-           : base(weight, price, name, sugar)
-        { }
+    {     
 
         public Wafer()
         { }
+
+        public Wafer(double weight, double price, double sugar, string name)
+            :base(weight, price, sugar, name)
+        { }
+
     }
 }

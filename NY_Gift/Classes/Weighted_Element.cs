@@ -4,36 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace NY_Gift.Classes
 {
     abstract public class Weighted_Element : Element
     {
 
-        private double _weight;
-        private double _price;
+        protected double _weight;
+        protected double _price;
 
-        public double Price
+        public abstract double Price
         {
-            get { return _price; }
-            set { _price = value; }
+            get;
+            set;
         }
 
-        public double Weight
+        public abstract double Weight
         {
-            get { return _weight; }
-            set { _weight = value; }
+            get;
+            set;
         }
+
+        public Weighted_Element() { }
 
         public Weighted_Element(double weight, double price, string name)
-            : base(name)
-        {
-            Weight = weight;
-            Price = price;
-        }
+            :base(name)
+        { }
 
-        public Weighted_Element()
-        {
-
-        }
     }
 }
