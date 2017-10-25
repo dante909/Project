@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NY_Gift.Classes
 {
-    public class Sweet : Weighted_Element
+    public class Sweet : Weighted_Element, IEquatable<Sweet>
     {
         private double _sugar;
 
@@ -57,9 +57,17 @@ namespace NY_Gift.Classes
             Sugar = sugar;
         }
 
-        public override string ToString()
+
+        public bool Equals(Sweet other)
         {
-            return string.Format("Weight {0}, Price {1}, Sugar {2}, Name {3}", Weight, Price, Sugar, Name);
+            if (new SweetResemblence().Equals(this, other))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

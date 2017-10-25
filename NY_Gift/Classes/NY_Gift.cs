@@ -8,42 +8,98 @@ using System.Collections;
 
 namespace NY_Gift.Classes
 {
-     public class NY_Gift : IEnumerable
+     public class NY_Gift : ICollection<Sweet>
     {
-        private ArrayList arSweets = new ArrayList();
         private Discount _bonus;
         private Packaging _packaging;
+        private List<Sweet> innerCol;
 
-        public Sweet Get_Sweet(int pos)
-        { return (Sweet)arSweets[pos]; }
-
-
-        public void Add_Sweet(Sweet sweet)
-        { arSweets.Add(sweet); }
-
-
-        public void Clear_Sweet()
-        { arSweets.Clear(); }
-
-
-        public int Count
-        { get { return arSweets.Count; } }
-
-
-        IEnumerator IEnumerable.GetEnumerator()
-        { return arSweets.GetEnumerator(); }
-
-        public NY_Gift()
+        public NY_Gift(Discount bonus, Packaging packaging)
         {
-
-        }
-
-        public NY_Gift(ArrayList arrsweets, Discount bonus, Packaging packaging)
-        {
-            arSweets = arrsweets;
+            innerCol = new List<Sweet>();
             _bonus = bonus;
             _packaging = packaging;
+            
         }
 
+        public Sweet this[int index]
+        {
+            get { return (Sweet)innerCol[index]; }
+            set { innerCol[index] = value; }
+        }
+
+        public int Count
+        {
+            get
+            {
+                return innerCol.Count;
+            }
+        }
+
+        public bool IsReadOnly
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+       
+        public void Add(Sweet item)
+        {            
+           innerCol.Add(item);           
+        }
+
+        public void Clear()
+        {
+            innerCol.Clear();
+        }
+
+        public bool Contains(Sweet item)
+        {
+            bool found = false;
+
+            foreach (Sweet sw in innerCol)
+            {
+                if (sw.Equals(item))
+                {
+                    found = true;
+                }
+            }
+
+            return found;
+        }
+
+        public IEnumerator<Sweet> GetEnumerator()
+        {
+            return new SweetEnumerator(this);
+        }
+
+        public bool Remove(Sweet item)
+        {
+            bool result = false;
+            for (int i = 0; i < innerCol.Count; i++)
+            {
+                Sweet curSweet = (Sweet)innerCol[i];
+                if (new SweetResemblence().Equals(curSweet, item))
+                {
+                    innerCol.RemoveAt(i);
+                    result = true;
+                    break;
+                }
+
+            }
+            return result;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return new SweetEnumerator(this);
+        }
+
+        public void CopyTo(Sweet[] array, int arrayIndex)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

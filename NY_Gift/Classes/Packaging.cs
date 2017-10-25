@@ -43,5 +43,10 @@ namespace NY_Gift.Classes
             Price = price;
         }
 
+        public override string ToString()
+        {
+            return string.Format("Weight {0}, Price {1}, Name {2}", Weight.ToString(), Price.ToString(), Name);
+        }
+
     }
 }

@@ -24,7 +24,7 @@
   <Class Name="NY_Gift.Classes.NY_Gift" Collapsed="true">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAABQAAAAABAAAAIAAAQAAgBAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIQAABAAAAAABAQCAAABAQAAgAAAAAEAAAAAABQIAA=</HashCode>
       <FileName>Classes\NY_Gift.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -39,9 +39,10 @@
   <Class Name="NY_Gift.Classes.Sweet" Collapsed="true">
     <Position X="7" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAYAAAAAAAAAAAAAAACAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAYAAAAAEAAAAAAAAACAAAAAAQAABAAAAAAA=</HashCode>
       <FileName>Classes\Sweet.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="NY_Gift.Classes.Wafer" Collapsed="true">
     <Position X="8.25" Y="4.75" Width="1.5" />
@@ -60,7 +61,7 @@
   <Class Name="NY_Gift.Classes.Program" Collapsed="true">
     <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
