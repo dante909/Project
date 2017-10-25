@@ -32,7 +32,7 @@ namespace NY_Gift.Classes
 
         public override string ToString()
         {
-            return string.Format("Discount {0}%", Bonus.ToString());
+            return string.Format("Discount: {0}%", Bonus.ToString());
         }
 
     }

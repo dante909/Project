@@ -10,7 +10,7 @@
   <Class Name="NY_Gift.Classes.Discount" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAABAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Discount.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,7 +24,7 @@
   <Class Name="NY_Gift.Classes.NY_Gift" Collapsed="true">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIQAABAAAAAABAQCAAABAQAAgAAAAAEAAAAAABQIAA=</HashCode>
+      <HashCode>AAIQAABAAAAAABAQCAAABAQAAgAAAAQEAAAAAABQIAA=</HashCode>
       <FileName>Classes\NY_Gift.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -32,14 +32,14 @@
   <Class Name="NY_Gift.Classes.Packaging" Collapsed="true">
     <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAEAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Packaging.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NY_Gift.Classes.Sweet" Collapsed="true">
     <Position X="7" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAYAAAAAEAAAAAAAAACAAAAAAQAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAYAAAAAAgAAAAAAAACAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Classes\Sweet.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -63,6 +63,21 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NY_Gift.Classes.SweetEnumerator" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABEAAAACAAAAAAAAAAAAAoAABAQCAAAA=</HashCode>
+      <FileName>Classes\SweetEnumerator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NY_Gift.Classes.SweetResemblence" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\SweetResemblence.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
