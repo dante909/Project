@@ -47,7 +47,7 @@ namespace NY_Gift.Classes
             }
             else
             {
-                // Set current box to next item in collection.
+                
                 curSweet = _collection[curIndex];
             }
             return true;

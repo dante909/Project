@@ -13,17 +13,18 @@ namespace NY_Gift.Classes
             Console.WriteLine("\nName\tPrice\tSugar\tWeight");
             foreach (Sweet sw in swList)
             {
-                Console.WriteLine("{0}\t{1}\t{2}\t{3}",
+                Console.WriteLine("{0}\t{1}\t{2}%\t{3}",
                     sw.Name, sw.Price.ToString(), sw.Sugar.ToString(), sw.Weight.ToString());
             }
-
+            Console.WriteLine("Discount thicket: {0}", swList.Bonus);
+            Console.WriteLine("Packaging: {0}", swList.Packaging);
             Console.WriteLine();
         }
 
         static void Main(string[] args)
         {
-            Discount bonus = new Discount(25);
-            Packaging pack = new Packaging(10, 150, "средняя");
+            Discount bonus = new Discount(30);
+            Packaging pack = new Packaging(150, 300, "средняя");
 
             NY_Gift gift = new NY_Gift(bonus, pack);
 

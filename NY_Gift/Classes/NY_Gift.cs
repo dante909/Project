@@ -17,15 +17,30 @@ namespace NY_Gift.Classes
         public NY_Gift(Discount bonus, Packaging packaging)
         {
             innerCol = new List<Sweet>();
-            _bonus = bonus;
-            _packaging = packaging;
+            Bonus = bonus;
+            Packaging = packaging;
             
         }
+
+
+        public Discount Bonus
+        {
+            get { return _bonus; }
+            set { _bonus = value; }
+        }
+
 
         public Sweet this[int index]
         {
             get { return (Sweet)innerCol[index]; }
             set { innerCol[index] = value; }
+        }
+
+
+        public Packaging Packaging
+        {
+            get { return _packaging; }
+            set { _packaging = value; }
         }
 
         public int Count

@@ -18,7 +18,7 @@ namespace NY_Gift.Classes
                 if (value < 0 || value > 1000)
                     Console.WriteLine("Error!");
                 else
-                    _price = value;
+                    _weight = value;
             }
         }
 
@@ -45,7 +45,7 @@ namespace NY_Gift.Classes
 
         public override string ToString()
         {
-            return string.Format("Weight {0}, Price {1}, Name {2}", Weight.ToString(), Price.ToString(), Name);
+            return string.Format("Weight: {0}, Price: {1}, Name: {2}", Weight.ToString(), Price.ToString(), Name);
         }
 
     }

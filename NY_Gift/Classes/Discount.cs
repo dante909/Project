@@ -12,13 +12,13 @@ namespace NY_Gift.Classes
 
         public Discount(double bonus)
         {
-            Bonis = bonus;
+            Bonus = bonus;
         }
 
         public Discount()
         { }
 
-        public double Bonis
+        public double Bonus
         {
             get { return _bonus; }
             set
@@ -32,7 +32,7 @@ namespace NY_Gift.Classes
 
         public override string ToString()
         {
-            return string.Format("Discount {0}%", Bonis.ToString());
+            return string.Format("Discount {0}%", Bonus.ToString());
         }
 
     }
