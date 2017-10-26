@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NY_Gift.Classes
 {
-    public class Sweet : Weighted_Element, IEquatable<Sweet>
+    public class Sweet : Weighted_Element, IEquatable<Sweet>, IComparable
     {
         private double _sugar;
 
@@ -57,7 +57,6 @@ namespace NY_Gift.Classes
             Sugar = sugar;
         }
 
-
         public bool Equals(Sweet other)
         {
             if (new SweetResemblence().Equals(this, other))
@@ -68,6 +67,22 @@ namespace NY_Gift.Classes
             {
                 return false;
             }
+        }
+
+        public int CompareTo(object obj)
+        {
+            Sweet temp = obj as Sweet;
+            if (temp != null)
+            {
+                if (this.Weight > temp.Weight)
+                    return 1;
+                if (this.Weight < temp.Weight)
+                    return -1;
+                else
+                    return 0;
+            }
+            else
+                throw new ArgumentException("Parametr is not Sweet!");
         }
     }
 }

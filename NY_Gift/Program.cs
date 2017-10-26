@@ -22,8 +22,6 @@ namespace NY_Gift.Classes
             Console.WriteLine("\nPackaging");
             Console.WriteLine("{0}", swList.Packaging);
             Console.WriteLine("--------------------------------------\n");
-
-
         }
 
         static void Main(string[] args)
@@ -34,20 +32,33 @@ namespace NY_Gift.Classes
             NY_Gift gift = new NY_Gift(bonus, pack);
 
             gift.Add(new Sweet(15, 25, 14, "Mars"));
-            gift.Add(new Sweet(15, 25, 14, "Snikers"));
+            gift.Add(new Sweet(25, 25, 14, "Snikers"));
             gift.Add(new Sweet(15, 25, 14, "Alenka"));
-            gift.Add(new Sweet(15, 25, 14, "Spartak"));
+            gift.Add(new Sweet(45, 25, 14, "Spartak"));
             gift.Add(new Sweet(15, 25, 14, "Spartak"));
 
             Display(gift);
-            Console.WriteLine("Removing {0}", gift[1].Name.ToString());
-            gift.Remove(gift[1]);
+            Console.WriteLine("Removing {0}", gift[0].Name.ToString());
+            gift.Remove(gift[0]);
             Display(gift);
 
             Sweet SweetCheck = new Sweet(15, 25, 14, "Mars");
             Console.WriteLine("Chek Mars in collection: {0}\n", gift.Contains(SweetCheck).ToString());
-                       
 
+
+            Sweet[] array = new Sweet[gift.Count];
+            gift.CopyTo(array, 0);
+
+            Array.Sort(array);
+
+            Console.WriteLine("\nSorting by Weight\n");
+            Console.WriteLine("Name\tPrice\tSugar\tWeighn");
+            foreach (Sweet sw in array)
+            {
+                Console.WriteLine("{0}\t{1}\t{2}%\t{3}",
+                    sw.Name, sw.Price.ToString(), sw.Sugar.ToString(), sw.Weight.ToString());
+            }
+            Console.WriteLine();
         }
     }
 }
