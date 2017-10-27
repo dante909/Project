@@ -54,6 +54,7 @@
     <Compile Include="Classes\Wafer.cs" />
     <Compile Include="Classes\Weighted_Element.cs" />
     <Compile Include="Interfaces\ICalority.cs" />
+    <Compile Include="Interfaces\IWeight.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

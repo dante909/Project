@@ -38,6 +38,11 @@ namespace NY_Gift.Classes
             }
         }
 
+        public static void GiftWeight(NY_Gift gift)
+        {
+            Console.WriteLine(gift.GetWeight());
+        }
+
         static void Main(string[] args)
         {
             Discount bonus = new Discount(30);
@@ -76,6 +81,9 @@ namespace NY_Gift.Classes
 
             Console.Write("Find calority of sweet: ");
             Calority(new Wafer(45, 25, 50, "Spartak"));
+
+            Console.Write("\nCommon weight: ");
+            GiftWeight(gift);
         }
     }
 }

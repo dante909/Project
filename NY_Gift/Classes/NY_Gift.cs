@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using NY_Gift.Interfaces;
 
 
 namespace NY_Gift.Classes
 {
-     public class NY_Gift : ICollection<Sweet>
+     public class NY_Gift : ICollection<Sweet>, IWeight
     {
         private Discount _bonus;
         private Packaging _packaging;
@@ -125,6 +126,17 @@ namespace NY_Gift.Classes
             {
                 array[i + arrayIndex] = innerCol[i];
             }
+        }
+
+        public double GetWeight()
+        {
+            double res = 0;
+            foreach(Sweet sw in innerCol)
+            {
+                res += sw.Weight;
+            }
+            res = res + Packaging.Weight;
+            return res;
         }
     }
 }
