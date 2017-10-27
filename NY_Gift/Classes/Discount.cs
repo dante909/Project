@@ -24,9 +24,9 @@ namespace NY_Gift.Classes
             set
             {
                 if (value < 0 || value > 100)
-                    Console.WriteLine("Error");
-                else
-                    _bonus = value;
+                    throw new ArgumentOutOfRangeException(
+                   $"{nameof(value)} must be between 0 and 100.");
+                _bonus = value;
             }
         }
 

@@ -16,9 +16,10 @@ namespace NY_Gift.Classes
             get { return _sugar; }
             set
             {
-                if (value > 50 || value < 0)
-                    Console.WriteLine("Error");
-                else
+                if (value > 70 || value < 0)
+                    throw new ArgumentOutOfRangeException(
+                   $"{nameof(value)} must be between 0 and 70.");
+                
                     _sugar = value;
             }
         }
@@ -29,9 +30,9 @@ namespace NY_Gift.Classes
             set
             {
                 if (value < 0 || value > 100)
-                    Console.WriteLine("Error!");
-                else
-                    _price = value;
+                    throw new ArgumentOutOfRangeException(
+                   $"{nameof(value)} must be between 0 and 100.");
+                _price = value;
             }
         }
 
@@ -41,9 +42,9 @@ namespace NY_Gift.Classes
             set
             {
                 if (value < 0 || value > 100)
-                    Console.WriteLine("Error!");
-                else
-                    _weight = value;
+                    throw new ArgumentOutOfRangeException(
+                   $"{nameof(value)} must be between 0 and 100.");
+                _weight = value;
             }
         }
         

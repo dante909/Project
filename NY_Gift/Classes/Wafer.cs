@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NY_Gift.Interfaces;
 
 namespace NY_Gift.Classes
 {
-    public class Wafer : Sweet
+    public class Wafer : Sweet, ICalority
     {     
 
         public Wafer()
@@ -16,5 +17,9 @@ namespace NY_Gift.Classes
             :base(weight, price, sugar, name)
         { }
 
+        public double GetCalority()
+        {
+            return Weight * 342 / 100;
+        }
     }
 }

@@ -23,9 +23,9 @@ namespace NY_Gift.Classes
             set
             {
                 if (value.Length > 15)
-                    Console.WriteLine("Error!");
-                else
-                    _name = value;
+                    throw new ArgumentOutOfRangeException(
+                    $"{nameof(value)} must be between less then 15.");
+                _name = value;
             }
         }
     }

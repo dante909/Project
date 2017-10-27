@@ -24,6 +24,20 @@ namespace NY_Gift.Classes
             Console.WriteLine("--------------------------------------\n");
         }
 
+        public static void Calority(Sweet sweet)
+        {
+           if(sweet is Candy)
+            {
+                Candy candy = sweet as Candy;
+                Console.WriteLine(candy.GetCalority());
+            }
+           if (sweet is Wafer)
+            {
+                Wafer wafer = sweet as Wafer;
+                Console.WriteLine(wafer.GetCalority());
+            }
+        }
+
         static void Main(string[] args)
         {
             Discount bonus = new Discount(30);
@@ -31,11 +45,11 @@ namespace NY_Gift.Classes
 
             NY_Gift gift = new NY_Gift(bonus, pack);
 
-            gift.Add(new Sweet(15, 25, 14, "Mars"));
-            gift.Add(new Sweet(25, 25, 14, "Snikers"));
-            gift.Add(new Sweet(15, 25, 14, "Alenka"));
-            gift.Add(new Sweet(45, 25, 14, "Spartak"));
-            gift.Add(new Sweet(15, 25, 14, "Spartak"));
+            gift.Add(new Sweet(15, 30, 25, "Mars"));
+            gift.Add(new Sweet(25, 45, 28, "Snikers"));
+            gift.Add(new Sweet(15, 35, 14, "Alenka"));
+            gift.Add(new Sweet(45, 25, 50, "Spartak"));
+            gift.Add(new Sweet(15, 15, 64, "Spartak"));
 
             Display(gift);
             Console.WriteLine("Removing {0}", gift[0].Name.ToString());
@@ -59,6 +73,9 @@ namespace NY_Gift.Classes
                     sw.Name, sw.Price.ToString(), sw.Sugar.ToString(), sw.Weight.ToString());
             }
             Console.WriteLine();
+
+            Console.Write("Find calority of sweet: ");
+            Calority(new Wafer(45, 25, 50, "Spartak"));
         }
     }
 }

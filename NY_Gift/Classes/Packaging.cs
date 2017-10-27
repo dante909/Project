@@ -16,9 +16,9 @@ namespace NY_Gift.Classes
             set
             {
                 if (value < 0 || value > 1000)
-                    Console.WriteLine("Error!");
-                else
-                    _weight = value;
+                    throw new ArgumentOutOfRangeException(
+                    $"{nameof(value)} must be between 0 and 1000.");
+                _weight = value;
             }
         }
 
@@ -28,9 +28,9 @@ namespace NY_Gift.Classes
             set
             {
                 if (value < 0 || value > 1000)
-                    Console.WriteLine("Error!");
-                else
-                    _price = value;
+                    throw new ArgumentOutOfRangeException(
+                   $"{nameof(value)} must be between 0 and 1000.");
+                _price = value;
             }
         }
 
