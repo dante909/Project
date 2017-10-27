@@ -17,7 +17,7 @@ namespace NY_Gift.Classes
             {
                 if (value < 0 || value > 1000)
                     throw new ArgumentOutOfRangeException(
-                    $"{nameof(value)} must be between 0 and 1000.");
+                        $"{nameof(value)} must be between 0 and 1000.");
                 _weight = value;
             }
         }
@@ -27,7 +27,7 @@ namespace NY_Gift.Classes
             get { return _price; }
             set
             {
-                if (value < 0 || value > 1000)
+                if (value < 0 || value > 2000)
                     throw new ArgumentOutOfRangeException(
                    $"{nameof(value)} must be between 0 and 1000.");
                 _price = value;

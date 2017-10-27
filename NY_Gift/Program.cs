@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NY_Gift.Interfaces;
 
 namespace NY_Gift.Classes
 {
@@ -24,18 +25,12 @@ namespace NY_Gift.Classes
             Console.WriteLine("--------------------------------------\n");
         }
 
-        public static void Calority(Sweet sweet)
+        public static void Calority(ICalority sweet)
         {
-           if(sweet is Candy)
-            {
-                Candy candy = sweet as Candy;
-                Console.WriteLine(candy.GetCalority());
-            }
-           if (sweet is Wafer)
-            {
-                Wafer wafer = sweet as Wafer;
-                Console.WriteLine(wafer.GetCalority());
-            }
+            ICalority obj = sweet as ICalority;
+
+            Console.WriteLine(sweet.GetCalority());
+            
         }
 
         public static void GiftWeight(NY_Gift gift)
