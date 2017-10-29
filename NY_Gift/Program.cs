@@ -26,12 +26,19 @@ namespace NY_Gift.Classes
             Console.WriteLine("--------------------------------------\n");
         }
 
+
+        //public static void Calority(Sweet sweet)
+        //{
+        //    ICalority obj = sweet as ICalority;
+        //    if (obj != null)
+        //        Console.WriteLine(obj.GetCalority());
+        //    else
+        //        Console.WriteLine("object does't support ICalority");
+        //}
+         
         public static void Calority(ICalority sweet)
         {
-            ICalority obj = sweet as ICalority;
-
             Console.WriteLine(sweet.GetCalority());
-            
         }
 
         public static void GiftWeight(IWeight gift)
