@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace NY_Gift.Classes
 {
+    
     public class Sweet : Weighted_Element, IEquatable<Sweet>, IComparable
     {
+
         private double _sugar;
 
         public double Sugar
@@ -18,7 +20,7 @@ namespace NY_Gift.Classes
             {
                 if (value > 70 || value < 0)
                     throw new ArgumentOutOfRangeException(
-                   $"{nameof(value)} must be between 0 and 70.");
+                   $"{nameof(Sugar)} must be between 0 and 70.");
                 
                     _sugar = value;
             }
@@ -31,7 +33,7 @@ namespace NY_Gift.Classes
             {
                 if (value < 0 || value > 100)
                     throw new ArgumentOutOfRangeException(
-                   $"{nameof(value)} must be between 0 and 100.");
+                   $"{nameof(Price)} must be between 0 and 100.");
                 _price = value;
             }
         }
@@ -43,7 +45,7 @@ namespace NY_Gift.Classes
             {
                 if (value < 0 || value > 100)
                     throw new ArgumentOutOfRangeException(
-                   $"{nameof(value)} must be between 0 and 100.");
+                   $"{nameof(Weight)} must be between 0 and 100.");
                 _weight = value;
             }
         }

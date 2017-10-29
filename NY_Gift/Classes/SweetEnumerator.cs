@@ -47,7 +47,6 @@ namespace NY_Gift.Classes
             }
             else
             {
-                
                 curSweet = _collection[curIndex];
             }
             return true;

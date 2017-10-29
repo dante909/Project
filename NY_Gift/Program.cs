@@ -11,7 +11,8 @@ namespace NY_Gift.Classes
     {
         public static void Display(NY_Gift swList)
         {
-            Console.WriteLine("\n{0, 15}", "Gift");
+            Console.WriteLine("--------------------------------------");
+            Console.WriteLine("{0, 15}", "Gift");
             Console.WriteLine("\nName\tPrice\tSugar\tWeight");
             foreach (Sweet sw in swList)
             {
@@ -33,7 +34,7 @@ namespace NY_Gift.Classes
             
         }
 
-        public static void GiftWeight(NY_Gift gift)
+        public static void GiftWeight(IWeight gift)
         {
             Console.WriteLine(gift.GetWeight());
         }
@@ -41,7 +42,7 @@ namespace NY_Gift.Classes
         static void Main(string[] args)
         {
             Discount bonus = new Discount(30);
-            Packaging pack = new Packaging(150, 300, "средняя");
+            Packaging pack = new Packaging(100, 300, "красная");
 
             NY_Gift gift = new NY_Gift(bonus, pack);
 
@@ -52,12 +53,12 @@ namespace NY_Gift.Classes
             gift.Add(new Sweet(15, 15, 64, "Spartak"));
 
             Display(gift);
-            Console.WriteLine("Removing {0}", gift[0].Name.ToString());
+            Console.WriteLine("Removing {0} from the collections\n", gift[0].Name);
             gift.Remove(gift[0]);
             Display(gift);
 
-            Sweet SweetCheck = new Sweet(15, 25, 14, "Mars");
-            Console.WriteLine("Chek Mars in collection: {0}\n", gift.Contains(SweetCheck).ToString());
+            Sweet SweetCheck = new Sweet(15, 15, 64, "Spartak");
+            Console.WriteLine("Check {0} in collections: {1}", SweetCheck.Name, gift.Contains(SweetCheck).ToString());
 
 
             Sweet[] array = new Sweet[gift.Count];
@@ -65,7 +66,7 @@ namespace NY_Gift.Classes
 
             Array.Sort(array);
 
-            Console.WriteLine("\nSorting by Weight\n");
+            Console.WriteLine("\nSorting collection of sweets by Weight\n");
             Console.WriteLine("Name\tPrice\tSugar\tWeighn");
             foreach (Sweet sw in array)
             {
@@ -74,11 +75,13 @@ namespace NY_Gift.Classes
             }
             Console.WriteLine();
 
-            Console.Write("Find calority of sweet: ");
+            Console.Write("Find calority of the sweet: ");
             Calority(new Wafer(45, 25, 50, "Spartak"));
 
-            Console.Write("\nCommon weight: ");
+            Console.Write("\nTotal weight of the gift: ");
             GiftWeight(gift);
+
+            Console.WriteLine();
         }
     }
 }
