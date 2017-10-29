@@ -40,7 +40,6 @@ namespace NY_Gift.Classes
 
         public bool MoveNext()
         {
-            //Avoids going beyond the end of the collection.
             if (++curIndex >= _collection.Count)
             {
                 return false;

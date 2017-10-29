@@ -50,14 +50,14 @@ namespace NY_Gift.Classes
             gift.Add(new Sweet(25, 45, 28, "Snikers"));
             gift.Add(new Sweet(15, 35, 14, "Alenka"));
             gift.Add(new Sweet(45, 25, 50, "Spartak"));
-            gift.Add(new Sweet(15, 15, 64, "Spartak"));
+            gift.Add(new Sweet(15, 15, 64, "Bounty"));
 
             Display(gift);
             Console.WriteLine("Removing {0} from the collections\n", gift[0].Name);
             gift.Remove(gift[0]);
             Display(gift);
 
-            Sweet SweetCheck = new Sweet(15, 15, 64, "Spartak");
+            Sweet SweetCheck = new Sweet(15, 15, 64, "Bounty");
             Console.WriteLine("Check {0} in collections: {1}", SweetCheck.Name, gift.Contains(SweetCheck).ToString());
 
 

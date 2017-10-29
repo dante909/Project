@@ -20,7 +20,6 @@ namespace NY_Gift.Classes
             innerCol = new List<Sweet>();
             Bonus = bonus;
             Packaging = packaging;
-            
         }
 
 
@@ -85,11 +84,11 @@ namespace NY_Gift.Classes
 
             return found;
         }
-
-        public IEnumerator<Sweet> GetEnumerator()
-        {
-            return new SweetEnumerator(this);
-        }
+        
+        //public IEnumerator<Sweet> GetEnumerator()
+        //{
+        //    return new SweetEnumerator(this);
+        //}
 
         public bool Remove(Sweet item)
         {
@@ -107,12 +106,12 @@ namespace NY_Gift.Classes
             }
             return result;
         }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return new SweetEnumerator(this);
-        }
-
+    
+        //IEnumerator IEnumerable.GetEnumerator()
+        //{
+        //    return new SweetEnumerator(this);
+        //}
+  
         public void CopyTo(Sweet[] array, int arrayIndex)
         {
             if (array == null)
@@ -137,6 +136,16 @@ namespace NY_Gift.Classes
             }
             res = res + Packaging.Weight;
             return res;
+        }
+
+        public IEnumerator<Sweet> GetEnumerator()
+        {
+            return ((ICollection<Sweet>)innerCol).GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((ICollection<Sweet>)innerCol).GetEnumerator();
         }
     }
 }
